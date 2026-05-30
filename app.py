@@ -10,7 +10,7 @@ app = Flask(__name__)
 
 dataset = pd.read_csv("traffic.csv")
 
-roads = dataset['road_name'].tolist()
+roads = dataset['road'].tolist()
 hours = dataset['hour'].tolist()
 
 # Home page
