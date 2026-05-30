@@ -1,0 +1,6 @@
+road,hour,vehicles,congestion
+Main Road,8,221,Medium
+Central Road,9,309,Medium
+Market Road,10,104,Low
+School Zone,8,485,High
+Highway,18,143,Low

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>Smart Traffic Dashboard</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+    <h1>SMART TRAFFIC CONGESTION DASHBOARD</h1>
+
+    <div class="container">
+        <div class="card">
+            <h2>Peak Hour</h2>
+            <p id="peakHour">Loading...</p>
+        </div>
+        <div class="insights">
+
+            <h2>Traffic Management Insights</h2>
+
+            <ul>
+
+                <li>Peak traffic congestion occurs during office hours.</li>
+
+                <li>Central Road experiences the highest congestion.</li>
+
+                <li>Traffic density increases significantly during peak hours.</li>
+
+                <li>Smart traffic signal systems can help reduce congestion.</li>
+
+                <li>Alternative route planning is recommended for hotspot areas.</li>
+
+            </ul>
+
+        </div>
+
+        <div class="card">
+            <h2>Total Vehicles</h2>
+            <p id="totalVehicles">0</p>
+        </div>
+
+        <div class="card">
+            <h2>Most Congested Road</h2>
+            <p id="hotspot">Loading...</p>
+        </div>
+
+    </div>
+
+    <div class="table-container">
+
+        <table>
+
+            <thead>
+
+                <tr>
+                    <th>Road Name</th>
+                    <th>Vehicle Count</th>
+                    <th>Congestion Level</th>
+                </tr>
+
+            </thead>
+
+            <tbody id="trafficTable">
+
+            </tbody>
+
+        </table>
+
+    </div>
+
+    <div class="chart-container">
+        <canvas id="trafficChart"></canvas>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
